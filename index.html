@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+     <!-- Login Area Start -->
     <div id="login-area">
         <h1 class="text-center">Welcome To Royal Bank</h1>
         <div class="submit-area">
@@ -19,15 +19,23 @@
             <input type="password" class="form-control" placeholder="Password">
             <br>
             <button id="login" class="btn btn-success">Enter</button>
-
         </div>         
     </div>
+    <!-- Login Area End -->
+
+    <!-- Transaction Area Start -->
+    <div  id="transaction-area" >
+        <h1>Transaction Area</h1>
+    </div>
+    <!-- Transaction Area End -->
     <script>
         const loginBtn =document.getElementById('login');
         loginBtn.addEventListener('click', function(){
-            console.log('someone click me');
+           const loginArea = document.getElementById('login-area')
+           loginArea.style.display = 'none';
+           const transactionArea = document.getElementById('transaction-area')
+           transactionArea.style.display = 'block';
         })
-
 
     </script>
 </body>
